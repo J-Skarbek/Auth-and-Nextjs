@@ -1,18 +1,14 @@
-import Header from '@/components/header';
 import './globals.css';
 
 export const metadata = {
-  title: 'NextPosts',
-  description: 'Browse and share amazing posts.',
+  title: 'Next Auth',
+  description: 'Next.js Authentication',
 };
 
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
-      <body>
-        <Header />
-        <main>{children}</main>
-      </body>
+      <body>{children}</body>
     </html>
   );
 }
