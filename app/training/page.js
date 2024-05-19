@@ -1,6 +1,15 @@
+import { verifyAuth } from '@/lib/auth';
 import { getTrainings } from '@/lib/training';
+import { redirect } from 'next/navigation';
 
 export default async function TrainingPage() {
+  const result = await verifyAuth();
+
+  if (!result.user) {
+    //use return/redirect to send a non-logged in user to the starting page
+    return redirect('/');
+  }
+
   const trainingSessions = getTrainings();
 
   return (
