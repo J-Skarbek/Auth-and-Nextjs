@@ -12,7 +12,7 @@ export default function AuthRootLayout({ children }) {
       <header id='auth-header'>
         <p>Welcome Back!</p>
         <form action={logout}>
-          <button type="button">Log Out</button>
+          <button>Log Out</button>
         </form>
       </header>
       {children}
